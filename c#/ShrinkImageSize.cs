@@ -1,3 +1,8 @@
+// Shrink Image Size / Reduce Image Size
+// twp steps: 
+//      1. reduce image physical size (reduce mainly happen in this step), if reduce ratio is too small, will affect image quality
+//      2. encode image to byte
+
 byte[] oldBytes = File.ReadAllBytes(imagePath);
 byte[] newBytes;
 using (MemoryStream sourceMS = new MemoryStream(oldBytes))
